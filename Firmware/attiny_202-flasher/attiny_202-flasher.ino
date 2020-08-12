@@ -1,6 +1,6 @@
 //Compled for ATTINY202
 //BoardManager: https://github.com/SpenceKonde/megaTinyCore/
-#define F_CPU 10000000
+#define F_CPU 1000000
 
 void setup() {
     delay(50);
@@ -15,7 +15,7 @@ void setup() {
 }
 
 void loop() {
-  delay(random(100,400));//wait between 100 and 400 mSec before looping again.
+  delay(random(400,1000));//wait between 100 and 400 mSec before looping again.
   byte newVal = random(0,255);//a new random byte
   PORTA.OUT = newVal;//change the LED outputs to track the new random byte.
   
